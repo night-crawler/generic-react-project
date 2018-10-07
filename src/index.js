@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 import createHistory from 'history/createBrowserHistory';
+
+import { App } from './features/App';
+import * as serviceWorker from './serviceWorker';
 import configureStore from './configureStore';
 import initialState from './initialState';
 
@@ -17,7 +18,7 @@ const render = () => {
     ReactDOM.render(
         <Provider store={ store }>
             <ConnectedRouter history={ history }>
-                <App/>
+                <App />
             </ConnectedRouter>
         </Provider>,
         document.getElementById('root')
