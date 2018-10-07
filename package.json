@@ -71,7 +71,7 @@
     "workbox-webpack-plugin": "3.6.2"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "webpack-dashboard -- node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "storybook": "start-storybook -p 9009 -s public",
@@ -109,7 +109,8 @@
     "babel-plugin-react-docgen": "^2.0.0",
     "babel-plugin-react-intl-auto": "^1.1.1",
     "eslint-import-resolver-webpack": "^0.10.1",
-    "react-test-renderer": "^16.5.2"
+    "react-test-renderer": "^16.5.2",
+    "webpack-dashboard": "^2.0.0"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
