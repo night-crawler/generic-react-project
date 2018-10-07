@@ -5,7 +5,8 @@ import { ConnectedRouter } from 'react-router-redux';
 import './index.css';
 import createHistory from 'history/createBrowserHistory';
 
-import { App } from './features/App';
+import { App } from '~/features/App';
+
 import * as serviceWorker from './serviceWorker';
 import configureStore from './configureStore';
 import initialState from './initialState';

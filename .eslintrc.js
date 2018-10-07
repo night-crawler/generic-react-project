@@ -15,7 +15,6 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:flowtype/recommended',
     'plugin:import/recommended',
-    // 'plugin:react-native/all'
   ],
   'parser': 'babel-eslint',
   'parserOptions': {
@@ -32,12 +31,14 @@ module.exports = {
     'import',
   ],
   'settings': {
+    'import/parser': 'babel-eslint',
     'import/resolver': {
-      node: { paths: [ 'src' ] },
-      'babel-module': {},
-      'extensions': [ '.js', '.jsx' ]
+      'babel-module': {
+        alias: {
+          '~': './src'
+        }
+      }
     },
-
     'react': {
       'createClass': 'createReactClass', // Regex for Component Factory to use,
                                          // default to 'createReactClass'
@@ -45,7 +46,6 @@ module.exports = {
       'version': '16.5.2', // React version, default to the latest React stable release
       'flowVersion': '0.53' // Flow version
     },
-    
   },
   'rules': {
     'react/jsx-pascal-case': [ 2, { 'allowAllCaps': true, 'ignore': [] } ],
@@ -62,12 +62,6 @@ module.exports = {
     'react/prefer-es6-class': [ 2, 'always' ],
 
     'react/jsx-tag-spacing': [ 1, { beforeSelfClosing: 'always', 'beforeClosing': 'allow' } ],
-
-    // react native
-    // 'react-native/no-unused-styles': 1,
-    // 'react-native/split-platform-components': 1,
-    // 'react-native/no-inline-styles': 1,
-    // 'react-native/no-color-literals': 1,
 
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 1,
