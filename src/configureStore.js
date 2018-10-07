@@ -8,33 +8,33 @@ import createRootReducer from './reducers';
 
 
 export default function configureStore(initialState = {}, history) {
-    const middlewares = [
-        apiMiddleware,
-        thunkMiddleware,
-        createLogger,
-        routerMiddleware(history),
-    ];
+  const middlewares = [
+    apiMiddleware,
+    thunkMiddleware,
+    createLogger,
+    routerMiddleware(history),
+  ];
 
-    const enhancers = [
-        applyMiddleware(...middlewares),
-    ];
+  const enhancers = [
+    applyMiddleware(...middlewares),
+  ];
 
-    const composeEnhancers =
+  const composeEnhancers =
         process.env.NODE_ENV !== 'production' &&
         typeof window === 'object' &&
         window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-            ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-                shouldHotReload: false,
-            })
-            : compose;
+          ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+            shouldHotReload: false,
+          })
+          : compose;
 
-    const store = createStore(
-        createRootReducer(),
-        initialState,
-        composeEnhancers(...enhancers)
-    );
+  const store = createStore(
+    createRootReducer(),
+    initialState,
+    composeEnhancers(...enhancers)
+  );
 
-    store.injectedReducers = {};
+  store.injectedReducers = {};
 
-    return store;
+  return store;
 }

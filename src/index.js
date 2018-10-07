@@ -15,14 +15,14 @@ const history = createHistory();
 const store = configureStore(initialState, history);
 
 const render = () => {
-    ReactDOM.render(
-        <Provider store={ store }>
-            <ConnectedRouter history={ history }>
-                <App />
-            </ConnectedRouter>
-        </Provider>,
-        document.getElementById('root')
-    );
+  ReactDOM.render(
+    <Provider store={ store }>
+      <ConnectedRouter history={ history }>
+        <App />
+      </ConnectedRouter>
+    </Provider>,
+    document.getElementById('root')
+  );
 };
 render();
 // If you want your app to work offline and load faster, you can change

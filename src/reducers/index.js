@@ -4,8 +4,8 @@ import { routeReducer } from './routeReducer';
 
 
 const createRootReducer = injectedReducers => combineReducers({
-    route: routeReducer,
+  route: routeReducer,
 
-    ...injectedReducers,
+  ...injectedReducers,
 });
 export default createRootReducer;
