@@ -10,15 +10,15 @@ addDecorator(
     header: false,
     inline: false,
     styles: {
-        button: {
-            base: {
-                zIndex: 5000,
-            }
-        },
-        children: {
-            position: 'inherit',
-            zIndex: 0,
-        },
+      button: {
+        base: {
+          zIndex: 5000,
+        }
+      },
+      children: {
+        position: 'inherit',
+        zIndex: 0,
+      },
     }
   })
 );
