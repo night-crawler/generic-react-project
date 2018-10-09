@@ -50,6 +50,7 @@
     "react-dev-utils": "^6.0.4",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
+    "react-intl": "^2.7.1",
     "react-redux": "^5.0.7",
     "react-router-redux": "^5.0.0-alpha.9",
     "react-virtualized": "^9.20.1",
@@ -119,6 +120,8 @@
     "@storybook/react": "^4.0.0-alpha.24",
     "babel-plugin-react-docgen": "^2.0.0",
     "babel-plugin-react-intl-auto": "^1.1.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint-import-resolver-webpack": "^0.10.1",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
@@ -134,7 +137,8 @@
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
-      "react-app-polyfill/jsdom"
+      "react-app-polyfill/jsdom",
+      "./jestsetup.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx}",

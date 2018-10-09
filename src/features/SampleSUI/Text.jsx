@@ -15,6 +15,7 @@ export class Text extends React.Component {
     render() {
       return (
         <Segment as={ Form } className='Text Block' color='brown'>
+          { this.props.uuid } - { this.props.data }
           <Checkbox
             label='EN > RU'
             toggle={ true }
