@@ -1,3 +1,5 @@
+const ERROR_ON_PRODUCTION = process.env.NODE_ENV === 'production' ? 2 : 1;
+
 module.exports = {
   'globals': {
     'process': true,
@@ -48,6 +50,9 @@ module.exports = {
     },
   },
   'rules': {
+    'no-unused-vars': ERROR_ON_PRODUCTION,
+    'react/display-name': ERROR_ON_PRODUCTION,
+
     'react/jsx-pascal-case': [ 2, { 'allowAllCaps': true, 'ignore': [] } ],
     'react/jsx-curly-spacing': [ 2, { 'when': 'always', 'allowMultiline': true } ],
     'react/jsx-boolean-value': [ 2, 'always' ],
@@ -63,8 +68,8 @@ module.exports = {
 
     'react/jsx-tag-spacing': [ 1, { beforeSelfClosing: 'always', 'beforeClosing': 'allow' } ],
 
-    'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 1,
+    'no-console': ERROR_ON_PRODUCTION,
+    'no-debugger': ERROR_ON_PRODUCTION,
 
     'indent': [ 'error', 2, { SwitchCase: 1 } ],
     'linebreak-style': [
