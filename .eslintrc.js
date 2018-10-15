@@ -52,6 +52,7 @@ module.exports = {
   'rules': {
     'no-unused-vars': ERROR_ON_PRODUCTION,
     'react/display-name': ERROR_ON_PRODUCTION,
+    'react/prop-types': ERROR_ON_PRODUCTION,
 
     'react/jsx-pascal-case': [ 2, { 'allowAllCaps': true, 'ignore': [] } ],
     'react/jsx-curly-spacing': [ 2, { 'when': 'always', 'allowMultiline': true } ],
