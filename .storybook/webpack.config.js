@@ -12,8 +12,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.yml/,
-        loaders: [ 'yml-loader' ],
+        test: /\.ya?ml$/,
+        use: [
+          { loader: 'js-yaml-loader', options: { safe: false } },
+        ],
       },
       {
         test: /\.css$/,
